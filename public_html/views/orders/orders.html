@@ -1,0 +1,96 @@
+<head>
+    <title>Customer Manager</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../../Content/bootstrap.css" rel="stylesheet" />
+    <link href="../../Content/styles.css" rel="stylesheet" />
+</head>
+<div class="orders view">
+    <div class="container">
+        <header>
+            <h3><span class="glyphicon glyphicon-folder-open"></span>&nbsp;&nbsp;All Customer Orders</h3>
+        </header>
+        <br />
+        <div class="customerEdit">
+            <form class="form-horizontal" role="form">
+                <div class="form-group">
+                    <label class="navbarText col-sm-2">Filter by Name/Product:</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control novalidate"/>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 repeat-animation" >
+                    <div>
+                        <h4><a href="#"> customer.firstName + ' ' + customer.lastName </a></h4>
+                    </div>
+                    <table class="table table-hover table-striped table-condensed table-bordered ordersTable">
+                        <thead>
+                            <tr>
+                                <th >Product</th>
+                                <th >Date</th>
+                                <th >Quantity</th>
+                                <th >Unit Price</th>
+                                <th >Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr  class="error">
+                                <td colspan="5">
+                                    <div class="text-center"><strong>No orders found</strong></div>
+                                </td>
+                            </tr>
+                            <tr class="repeat-animation">
+                                <td>
+                                    product 
+                                </td>
+                                <td>
+                                    04/12/2017
+                                </td>
+                                <td>
+                                    quantity
+                                </td>
+                                <td>
+                                    price 
+                                </td>
+                                <td>
+                                    orderTotal
+                                </td>
+                            </tr>
+                            <tr class="info">
+                                <td colspan="4">
+                                    &nbsp;
+                                </td>
+                                <td>
+                                    <strong>customer.ordersTotal </strong>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="row show-hide-animation">
+                <div class="col-md-12">
+                    <h4>No customers found</h4>
+                </div>
+            </div>
+            <div class="row show-hide-animation" style="margin-left:0px;">
+                <div class="col-md-12">
+                    <div data-pagination
+                         data-on-select-page="vm.pageChanged(page)"
+                         data-total-items="vm.totalRecords"
+                         data-page="vm.currentPage"
+                         data-boundary-links="true"
+                         class="pagination-sm">
+                    </div>
+                    <h5>Showing  vm.filteredCount  of  vm.totalRecords total customers</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br /><br /><br />
+</div>
+
