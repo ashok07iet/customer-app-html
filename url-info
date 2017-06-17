@@ -1,0 +1,2 @@
+http://localhost:3000/api/dataservice/customerById/<id> fetch one customer
+http://localhost:3000/api/dataservice/customers fetch one customer
